@@ -164,21 +164,22 @@ void SendCoinsDialog::on_sendButton_clicked()
     }
 
     fNewRecipientAllowed = false;
-    if(!IsTimeGood){
-        int ret = QMessageBox::warning(this, tr("Fundamental node Payment"),
-                                        tr("Fundamental node implementation is not started yet\n"
-
-                                           "Please wait till appropriate time."),
-                                        QMessageBox::Ok);
-
-        if(ret == QMessageBox::Ok){
-            fNewRecipientAllowed = true;
-            return;
-        }
-    }
 
     if(IsFundamentNodePayment){
 
+                if(!IsTimeGood){
+                    int ret = QMessageBox::warning(this, tr("Fundamental node Payment"),
+                                                    tr("Fundamental node implementation is not started yet\n"
+
+                                                       "Please wait till appropriate time."),
+                                                    QMessageBox::Ok);
+
+                    if(ret == QMessageBox::Ok){
+                        fNewRecipientAllowed = true;
+                        return;
+                    }
+                }
+        
                 int ret = QMessageBox::warning(this, tr("Fundamental node Payment"),
                                                 tr("You are about to do burning for Fundamentalnode payment, Please make sure that you send excatly 2500001 excluding fees\n"
 
