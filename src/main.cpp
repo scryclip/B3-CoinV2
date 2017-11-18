@@ -771,7 +771,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CTransaction &tx, bool fLimitFree,
          * then, it should be rejected otherwise he will lose his coins
          * */
         //2017-11-17 scryclip hack to allow FN collateral transactions to work
-        if ( nFees > txMinFee * 10000 && ((nFees < 2499999 * COIN) || (nFees > 2500001 * COIN)))
+        if ( nFees > txMinFee * 10000 )
                     return error("AcceptToMempool : insane fees %s, %d > %d",
                                  hash.ToString(),
                                  nFees, MIN_RELAY_TX_FEE * 10000);
