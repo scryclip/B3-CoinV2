@@ -618,7 +618,7 @@ void ThreadStakeMiner(CWallet *pwallet)
         if (fTryToSync)
         {
             fTryToSync = false;
-            if ( Params().NetworkID() == CChainParams::TESTNET ){
+            if (true || Params().NetworkID() == CChainParams::TESTNET ){
                 if (vNodes.size() < 1 )
                 {
                     MilliSleep(60000);

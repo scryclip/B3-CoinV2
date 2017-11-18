@@ -882,7 +882,7 @@ bool AcceptableFundamentalTxn(CTxMemPool& pool, CTransaction &tx, bool ignoreFee
         int64_t nValueInTxn = tx.GetValueIn(mapInputs);
         int64_t nValueOutTxn = tx.GetValueOut();
 
-        if((nValueInTxn - nValueOutTxn) < FUNDAMENTALNODEAMOUNT){
+        if((nValueInTxn - nValueOutTxn) < FUNDAMENTALNODEAMOUNT - 1 * COIN) {
             return false;
             //return error("AcceptableFundamentalTxn : Transaction has lower value then expected (actual = %d, expected = %d", nValueInTxn, FUNDAMENTALNODEAMOUNT);
 

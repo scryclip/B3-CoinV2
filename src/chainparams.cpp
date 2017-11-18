@@ -51,7 +51,7 @@ public:
         pchMessageStart[0] = 0xd1;
         pchMessageStart[1] = 0x2e;
         pchMessageStart[2] = 0x1e;
-		pchMessageStart[3] = 0xe6;
+		pchMessageStart[3] = 0xc4;
         vAlertPubKey = ParseHex("04b5ffc3286e618001604b5e16eefc30812c7d0b2dc91af9ee470c4605a9183d162c912bb437341270f00637432d2af3e7c01bcabcbdb8c085d56d97a08f355ce4");
         nDefaultPort = 5647;
         nRPCPort = 5467;
@@ -77,7 +77,7 @@ public:
         assert(hashGenesisBlock == uint256("0x4b0d7f133c5267d715d4d8992635a5490d1edd6b7072cce3f8fe116aba983b6a"));
         assert(genesis.hashMerkleRoot == uint256("0x4243fd570d4cb2e2930767f5bf18b2f65f1b7c4e16a392552d1efadeec00753d"));
 
-	vSeeds.push_back(CDNSSeedData("0", "seed0.b3coin.zone"));
+        vSeeds.push_back(CDNSSeedData("0", "seed0.b3coin.zone"));
         vSeeds.push_back(CDNSSeedData("1", "seed1.b3coin.zone"));
         vSeeds.push_back(CDNSSeedData("2", "seed2.b3coin.zone"));
         vSeeds.push_back(CDNSSeedData("3", "seed3.b3coin.zone"));
