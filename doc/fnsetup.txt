@@ -1,0 +1,57 @@
+FN setup guide
+
+To create the output
+1. use a qt wallet (windows/linux/mac)
+2. create a new address on the wallet. send 25000003 to the address.
+3. After 1 or more confirmations send 25000002 from that address to that same address with the with the send FN payment checkbox ticked (you might want to use coin control to make sure if there is more than 1 address in the wallet)
+4. After 1 confirmation to confirm success open the debug windown and type "fundamentalnode outputs" if you see an output success.
+5. in debug run dumpprivkey (address) in debug console, save this securely you will use it for your FN setup.
+
+
+to run a Fnode (vps suggestion)
+
+1. setup a VPS.
+2. b3coind importprivkey (privkey)
+3. b3coind fundamentalnode genkey
+4. change your b3coin.conf
+example
+----
+listen=1
+server=1
+daemon=1
+rpcuser=b3rpc
+rpcpassword=(long secure pw goes here)
+staking=0
+upnp=0
+
+fundamentalnode=1
+fundamentalnodeprivkey=(genkey generated above)
+fundamentalnodeaddr=(theipofthevps):5647
+promode=1
+
+---
+5. b3coind stop
+6. b3coind
+7. b3coind fundamentalnode start (it should report fundamentalnode started succesfully)
+funds will go into this wallet.
+
+To run an Fnode (qt wallet)
+1. importprivkey (if you did not create it in this wallet)
+2. port foward 5647 to the local ip (read your routers help)
+3 -7 the same as above do commands in debug console
+
+
+To extract funds.
+To get your rewards you should enable coin control on your qt wallet, and import the private key of the FN (the FN can be running the same priv key, you just use a qt wallet to get the funds out safely)
+go to send click inputs, you will see a list of inputs there is one input of 1 b3 you should LOCK this and leave it locked and never touch
+*if you move the 1B3 thats in this wallet you kill you FN forever and your coins are still burned and you cannot get it back so never touch this 1b3 input*
+once you have use coin contol and locked the 1 b3 input you can just use coin control and select any of the rewards and send them to an address of your choice
+
+happy Fundamentalnoding.
+
+
+
+
+
+taking funds from FN
+1. 
