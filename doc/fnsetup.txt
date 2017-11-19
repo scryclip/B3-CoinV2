@@ -43,15 +43,9 @@ To run an Fnode (qt wallet)
 
 To extract funds.
 To get your rewards you should enable coin control on your qt wallet, and import the private key of the FN (the FN can be running the same priv key, you just use a qt wallet to get the funds out safely)
+you need to have coin control enabled
 go to send click inputs, you will see a list of inputs there is one input of 1 b3 you should LOCK this and leave it locked and never touch
 *if you move the 1B3 thats in this wallet you kill you FN forever and your coins are still burned and you cannot get it back so never touch this 1b3 input*
 once you have use coin contol and locked the 1 b3 input you can just use coin control and select any of the rewards and send them to an address of your choice
 
 happy Fundamentalnoding.
-
-
-
-
-
-taking funds from FN
-1. 
